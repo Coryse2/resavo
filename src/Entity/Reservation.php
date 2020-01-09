@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -9,6 +10,7 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
+ * @ApiResource
  * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity(fields={"dateReservation", "seance", "salle"},
  * message= "Cette réservation est pas disponible choisissez une autre séance ou autre date")

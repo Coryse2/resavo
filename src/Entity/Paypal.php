@@ -2,9 +2,11 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource
  * @ORM\HasLifecycleCallbacks()
  * @ORM\Table(name="paiements")
  * @ORM\Entity(repositoryClass="App\Repository\PaypalRepository")
